@@ -40,3 +40,10 @@ The config file [scripts/config.sh.sample](scripts/config.sh.sample)
 1. Q: Added a new user, but can't login the outline
     - You should add an email for the new user
     - If the domain in the email is not the same as the admin user's domain, you should add the domain to the settings `ALLOWED_DOMAINS`
+
+## How to deploy on server
+
+-   Mirar de pujar la versio a un hosting que accepti docker
+-   Si amb la configuració local ja es suficient tot okei, pero sino, s'ha de tirar les comandes 
+    -   make install
+    -   make start

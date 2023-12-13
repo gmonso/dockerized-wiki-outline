@@ -38,3 +38,16 @@ clean-data: clean-docker
 		./data/pgdata ./data/uc ./data/outline
 
 clean: clean-docker clean-conf
+
+
+export_database:
+	${docker-compose} exec -t wk-postgres pg_dump -c -U user outline > dump_outline_db.sql
+# 	${docker-compose} exec -t wk-postgres pg_dumpall -c -U user > outline.sql
+
+
+import_database:
+	cat dump_outline_db.sql | ${docker-compose} exec -T -i wk-postgres psql -U user outline
+#	${docker-compose} exec -t wk-postgres psql outline < outline.sql
+#	${docker-compose} down wk-outline
+#	make start
+
