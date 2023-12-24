@@ -43,9 +43,12 @@ The config file [scripts/config.sh.sample](scripts/config.sh.sample)
     - You should add an email for the new user
     - If the domain in the email is not the same as the admin user's domain, you should add the domain to the settings `ALLOWED_DOMAINS`
 
-## How to deploy on server
+## How to deploy on local
 
--   Mirar de pujar la versio a un hosting que accepti docker
--   Si amb la configuració local ja es suficient tot okei, pero sino, s'ha de tirar les comandes 
+-   Amb un sistema operatiu linux
+-   Si amb la configuració local ja es suficient, s'ha de tirar les comandes 
     -   make install
     -   make start
+    -   make import_database
+-   Accedir a `http://127.0.0.1:8888/uc/` amb les claus que s'han acabat de crear a través de la CLI.
+-   Després tornar a `http://127.0.0.1:8888/` i ja veuràs que podràs accedir a la wiki en nom de l'usuari creat.
